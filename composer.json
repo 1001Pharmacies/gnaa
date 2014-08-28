@@ -5,7 +5,7 @@
 
     "authors": [
         {
-            "name": "methylbro",
+            "name":  "methylbro",
             "email": "thomas@1001pharmacies.com"
         }
     ],
@@ -15,10 +15,10 @@
     },
 
     "require-dev": {
-        "phing/phing": "2.*",
-        "phpunit/phpunit": "3.7.*",
+        "phing/phing":               "2.*",
+        "phpunit/phpunit":           "3.7.*",
         "squizlabs/php_codesniffer": "1.*",
-        "sebastian/phpcpd": "2.*"
+        "sebastian/phpcpd":          "2.*"
     },
 
     "autoload": {
