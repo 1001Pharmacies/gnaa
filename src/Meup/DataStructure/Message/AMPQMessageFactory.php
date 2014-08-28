@@ -1,6 +1,6 @@
 <?php
 
-namespace Meup\DataStruture\Message;
+namespace Meup\DataStructure\Message;
 
 class AMPQMessageFactory implements AMPQMessageFactoryInterface
 {
@@ -12,13 +12,15 @@ class AMPQMessageFactory implements AMPQMessageFactoryInterface
     protected $class;
 
     /**
+     * @throws InvalidArgumentException
+     * 
      * @param string $class
      */
     public function __construct($class = self::DEFAULT_CLASS)
     {
         $this->class = new \ReflectionClass($class);
         if (!$this->class->implementsInterface('\Meup\DataStruture\Message\AMPQMessageInterface')) {
-            throw new InvalidArgumentException();
+            throw new \InvalidArgumentException();
         }
     }
 
