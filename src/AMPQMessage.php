@@ -2,9 +2,11 @@
 
 namespace Meup\DataStructure\Message;
 
-class AMPQMessage
+/**
+ *
+ */
+class AMPQMessage implements AMPQMessageInterface
 {
-
     /**
      * @var string
      */
@@ -48,5 +50,4 @@ class AMPQMessage
     {
         return $this->data;
     }
-
 }

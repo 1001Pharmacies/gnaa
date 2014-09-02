@@ -2,9 +2,15 @@
 
 namespace Meup\DataStructure\Message;
 
+/**
+ *
+ */
 class AMPQMessageFactory implements AMPQMessageFactoryInterface
 {
-    const DEFAULT_CLASS = '\Meup\DataStruture\Message\AMPQMessage';
+    /**
+     * The default AMPQMessage class.
+     */
+    const DEFAULT_CLASS = 'Meup\DataStructure\Message\AMPQMessage';
 
     /**
      * @var ReflectionClass
@@ -18,9 +24,17 @@ class AMPQMessageFactory implements AMPQMessageFactoryInterface
      */
     public function __construct($class = self::DEFAULT_CLASS)
     {
+        $interface   = 'Meup\DataStructure\Message\AMPQMessageInterface';
         $this->class = new \ReflectionClass($class);
-        if (!$this->class->implementsInterface('\Meup\DataStruture\Message\AMPQMessageInterface')) {
-            throw new \InvalidArgumentException();
+
+        if (!$this->class->implementsInterface($interface)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "'%s' should implements %s",
+                    $this->class->getName(),
+                    $interface
+                )
+            );
         }
     }
 

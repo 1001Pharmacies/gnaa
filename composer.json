@@ -2,6 +2,7 @@
     "name":         "1001pharmacies/gnaa",
     "description":  "Used to describe RabbitMQ Messages datastructure in all project",
     "type":         "library",
+    "license":      "proprietary",
 
     "authors": [
         {
@@ -22,6 +23,6 @@
     },
 
     "autoload": {
-        "psr-0": {"": "src/"}
+        "psr-4": {"Meup\\DataStructure\\Message\\": "src/"}
     }
 }
