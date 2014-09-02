@@ -14,7 +14,7 @@
 
     <testsuites>
         <testsuite name="Gnaa Test Suite">
-            <directory>./src/Tests</directory>
+            <directory>./src/Meup/DataStructure/*/Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -23,7 +23,7 @@
             <directory>./src</directory>
             <exclude>
                 <directory>./vendor</directory>
-                <directory>./src/Tests</directory>
+                <directory>./src/Meup/DataStructure/*/Tests</directory>
             </exclude>
         </whitelist>
     </filter>

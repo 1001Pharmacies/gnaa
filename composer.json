@@ -23,6 +23,8 @@
     },
 
     "autoload": {
-        "psr-4": {"Meup\\DataStructure\\Message\\": "src/"}
+        "psr-0": {
+            "Meup\\DataStructure\\Message\\": "src/"
+        }
     }
 }
