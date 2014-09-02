@@ -5,6 +5,18 @@ namespace Meup\DataStructure\Message;
 interface AMPQMessageInterface
 {
     /**
+     * @param mixed $id
+     *
+     * @return self
+     */
+    public function setId($id);
+
+    /**
+     * @return mixed
+     */
+    public function getId();
+    
+    /**
      * @param string $type
      * 
      * @return self

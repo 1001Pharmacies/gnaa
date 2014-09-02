@@ -11,6 +11,19 @@ use Meup\DataStructure\Message\AMPQMessage;
 class AMPQMessageTest extends BaseTestCase
 {
     /**
+     * Test the $id attribute's accessors
+     *
+     * @return void
+     */
+    public function testId()
+    {
+        $id      = rand(1, 999);
+        $message = (new AMPQMessage())->setId($id);
+
+        $this->assertEquals($id, $message->getId());
+    }
+
+    /**
      * Test the $type attribute's accessors
      *
      * @return void

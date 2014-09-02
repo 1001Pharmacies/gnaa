@@ -8,6 +8,11 @@ namespace Meup\DataStructure\Message;
 class AMPQMessage implements AMPQMessageInterface
 {
     /**
+     * @var mixed
+     */
+    private $id;
+
+    /**
      * @var string
      */
     private $type;
@@ -16,6 +21,23 @@ class AMPQMessage implements AMPQMessageInterface
      * @var mixed
      */
     private $data;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * {@inheritDoc}
