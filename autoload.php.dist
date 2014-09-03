@@ -1,3 +1,9 @@
 <?php
 
-return require __DIR__.'/vendor/autoload.php';
+$loader = require __DIR__.'/vendor/autoload.php';
+
+\Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace(
+    'JMS\Serializer\Annotation', __DIR__.'/vendor/jms/serializer/src'
+);
+
+return $loader;
