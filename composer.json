@@ -12,7 +12,8 @@
     ],
 
     "require": {
-        "php": ">=5.5.0"
+        "php":                   ">=5.5.0",
+        "jms/serializer-bundle": "0.13.*"
     },
 
     "require-dev": {

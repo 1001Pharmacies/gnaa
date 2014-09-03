@@ -2,6 +2,8 @@
 
 namespace Meup\DataStructure\Message;
 
+use JMS\Serializer\Annotation\Type;
+
 /**
  *
  */
@@ -9,16 +11,19 @@ class AMPQMessage implements AMPQMessageInterface
 {
     /**
      * @var mixed
+     * @Type("string")
      */
     private $id;
 
     /**
      * @var string
+     * @Type("string")
      */
     private $type;
 
     /**
      * @var mixed
+     * @Type("string")
      */
     private $data;
 
