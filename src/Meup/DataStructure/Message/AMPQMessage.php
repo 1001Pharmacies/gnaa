@@ -19,6 +19,12 @@ class AMPQMessage implements AMPQMessageInterface
      * @var string
      * @JMS\Type("string")
      */
+    private $index;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
     private $type;
 
     /**
@@ -42,6 +48,23 @@ class AMPQMessage implements AMPQMessageInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIndex($index)
+    {
+        $this->index = $index;
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIndex()
+    {
+        return $this->index;
     }
 
     /**

@@ -24,6 +24,19 @@ class AMPQMessageTest extends BaseTestCase
     }
 
     /**
+     * Test the $index attribute's accessors
+     *
+     * @return void
+     */
+    public function testIndex()
+    {
+        $index    = uniqid();
+        $message = (new AMPQMessage())->setIndex($index);
+
+        $this->assertEquals($index, $message->getIndex());
+    }
+
+    /**
      * Test the $type attribute's accessors
      *
      * @return void
