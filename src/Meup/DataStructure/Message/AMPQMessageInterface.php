@@ -15,6 +15,18 @@ interface AMPQMessageInterface
      * @return mixed
      */
     public function getId();
+
+    /**
+     * @param mixed $index
+     *
+     * @return self
+     */
+    public function setIndex($index);
+
+    /**
+     * @return mixed
+     */
+    public function getIndex();
     
     /**
      * @param string $type
