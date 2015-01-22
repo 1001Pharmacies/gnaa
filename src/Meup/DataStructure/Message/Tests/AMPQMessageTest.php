@@ -18,7 +18,8 @@ class AMPQMessageTest extends BaseTestCase
     public function testId()
     {
         $id      = rand(1, 999);
-        $message = (new AMPQMessage())->setId($id);
+        $message = new AMPQMessage();
+        $message->setId($id);
 
         $this->assertEquals($id, $message->getId());
     }
@@ -31,7 +32,8 @@ class AMPQMessageTest extends BaseTestCase
     public function testIndex()
     {
         $index    = uniqid();
-        $message = (new AMPQMessage())->setIndex($index);
+        $message = new AMPQMessage();
+        $message->setIndex($index);
 
         $this->assertEquals($index, $message->getIndex());
     }
@@ -44,7 +46,8 @@ class AMPQMessageTest extends BaseTestCase
     public function testType()
     {
         $type    = uniqid();
-        $message = (new AMPQMessage())->setType($type);
+        $message = new AMPQMessage();
+        $message->setType($type);
 
         $this->assertEquals($type, $message->getType());
     }
@@ -57,7 +60,8 @@ class AMPQMessageTest extends BaseTestCase
     public function testData()
     {
         $data    = uniqid();
-        $message = (new AMPQMessage())->setData($data);
+        $message = new AMPQMessage();
+        $message->setData($data);
 
         $this->assertEquals($data, $message->getData());
     }
