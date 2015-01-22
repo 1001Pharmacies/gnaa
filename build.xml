@@ -8,10 +8,11 @@
         phpcs    Detects standard violations on the code.
         phpcpd   Detects duplicate code portions.
         phpunit  Executes phpunit tests
+        phplint  Executes php linter
         </echo>
     </target>
 
-    <target name="test" depends="phpcs,phpcpd,phpunit">
+    <target name="test" depends="phplint,phpcs,phpcpd,phpunit">
     </target>
 
     <target name="phpcs">
@@ -35,4 +36,11 @@
         <exec logoutput="true" dir="./" command="./vendor/bin/phpunit" />
     </target>
 
+    <target name="phplint">
+        <phplint haltonfailure="true" deprecatedAsError="true" level="debug" interpreter="php">
+            <fileset dir="src">
+                <include name="**/*.php"/>
+            </fileset>
+        </phplint>
+    </target>
 </project>
