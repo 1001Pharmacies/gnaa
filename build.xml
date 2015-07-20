@@ -29,11 +29,11 @@
     </target>
 
     <target name="phpcpd">
-        <exec logoutput="true" dir="./" command="./vendor/bin/phpcpd ./src" />
+        <exec logoutput="true" dir="./" command="./bin/phpcpd ./src" />
     </target>
 
     <target name="phpunit">
-        <exec logoutput="true" dir="./" command="./vendor/bin/phpunit" />
+        <exec logoutput="true" dir="./" command="./bin/phpunit" />
     </target>
 
     <target name="phplint">
