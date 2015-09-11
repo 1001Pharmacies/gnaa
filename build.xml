@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<project name="1001pharmacies/csv-bundle" basedir="./" default="help">
+<project name="1001pharmacies/gnaa" basedir="./" default="help">
     <property name="builddir" value="build" />
 
     <target name="help">
